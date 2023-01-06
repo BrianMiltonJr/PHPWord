@@ -37,10 +37,9 @@ class Image extends AbstractStyle
         }
         $css = [];
 
-        $width = $style->getWidth();
-        $height = $style->getHeight();
-        $css['width'] = $this->getValueIf(is_numeric($width), $width . 'px');
-        $css['height'] = $this->getValueIf(is_numeric($height), $height . 'px');
+        $css['max-width'] = '100%';
+        $css['max-height'] = '100vh';
+        $css['margin'] = 'auto';
 
         return $this->assembleCss($css);
     }

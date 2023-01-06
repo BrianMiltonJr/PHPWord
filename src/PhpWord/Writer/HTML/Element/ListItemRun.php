@@ -36,8 +36,9 @@ class ListItemRun extends TextRun
         }
 
         $writer = new Container($this->parentWriter, $this->element);
-        $content = $writer->write() . PHP_EOL;
-
+        $content = "<ul>" . PHP_EOL;
+        $content .= "<li>" . $writer->write() . "</li>" . PHP_EOL;
+        $content .= "</ul>" . PHP_EOL;
         return $content;
     }
 }
